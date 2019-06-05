@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src gap://ready file://* *; style-src 'self' http://* https://* 'unsafe-inline'; script-src 'self' http://* https://* 'unsafe-inline' 'unsafe-eval'">
+    <link rel="stylesheet" href="./style.css">
+    <title>Socket.io Chat server</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+</head>
+<body>
+    <div class="chat-window">
+        <div class="chat-section">
+            <div id="chat-content" class="chat-content"></div>
+            <span id="chat-broadcast"></span>
+        </div>
+        <div class="chat-writer">
+            <form class="message-form" id="chat-form">
+                <input id="chat-name" type="text" placeholder="chatName">
+                <div class="chat-message-group">
+                    <input class="chat-message" id="chat-message" type="text" placeholder="message">                    
+                    <button class="submit-button" type="submit">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="chat-logic.js"></script>    
+</html>
